@@ -83,6 +83,8 @@ npm run test:coverage
 - Mission configuration is under `config/`.
 - Read-only verification scripts are under `scripts/`.
 - Standard JSON compiler inputs used for WorldScan are under `worldscan/`.
+- The latest explorer verification record is in
+  [`WORLDSCAN_VERIFICATION.md`](./WORLDSCAN_VERIFICATION.md).
 
 Install dependencies with Node.js 22 or newer:
 
