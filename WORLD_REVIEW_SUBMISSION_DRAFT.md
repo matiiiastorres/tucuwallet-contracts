@@ -49,10 +49,15 @@ wallet and secure TUCU token rewards.
 - WLD: `0x2cfc85d8e48f8eab294be644d9e25c3030863003`
 - USDC: `0x79A02482A880bCE3F13e09Da970dC34db4CD24d1`
 
-The new contract calls return `invalid_contract` in the unapproved draft QR
-because World only activates a draft contract allowlist after review approval.
-The contracts, source, configuration and automated tests are included for
-review.
+### Reviewer note about the draft allowlist
+
+All five direct contract entrypoints and all three Permit2 tokens are declared
+in **Developer Portal > Mini App > Permissions** for this draft. In our draft
+QR smoke test, World Wallet currently returns `invalid_contract` for the new
+entrypoints. According to the MiniKit documentation this means the contract is
+not yet allowed for the app. Please apply or validate the draft Permissions
+allowlist before testing Wallet transfers and TUCU claims. The verified
+contracts, source code, configuration and automated tests are included above.
 
 ## Español — traducción para aprobación del propietario
 
@@ -94,15 +99,69 @@ Chain y recompensas seguras del token TUCU.
 - El despliegue Rewards V2 superó la auditoría de solo lectura incluida en el
   repositorio y tiene ocho misiones configuradas.
 
-Las llamadas nuevas devuelven `invalid_contract` desde el QR del borrador no
-aprobado porque World activa la lista de contratos del borrador únicamente
-después de aprobar la revisión. Los contratos, el código, la configuración y
-las pruebas automatizadas están disponibles para el equipo revisor.
+### Nota para el revisor sobre los permisos del borrador
+
+Los cinco contratos llamados directamente y los tres tokens Permit2 están
+declarados en **Developer Portal > Mini App > Permissions** para este borrador.
+Durante nuestra prueba con el QR, World Wallet todavía devuelve
+`invalid_contract` para los nuevos entrypoints. Según la documentación de
+MiniKit, esto significa que el contrato aún no está permitido para la app.
+Solicitamos aplicar o validar los permisos del borrador antes de probar los
+envíos de Wallet y los reclamos TUCU. Los contratos verificados, el código, la
+configuración y las pruebas automatizadas están incluidos arriba.
+
+## Português — tradução para validação
+
+TucuWallet amplia seu Mini App aprovado com uma carteira não custodial na
+World Chain e recompensas seguras do token TUCU.
+
+### Carteira
+
+- Usuários da World podem consultar seus saldos de TUCU, WLD e USDC.
+- Podem enviar tokens compatíveis para outro endereço da World Chain ou para um
+  usuário resolvido da TucuWallet/World.
+- Cada transferência é confirmada expressamente pelo usuário na World Wallet.
+- As transferências utilizam o `TucuTransferRouter`, um contrato não custodial
+  verificado. Ele distribui todo o valor aprovado entre o destinatário e a
+  tesouraria na mesma transação, sem reter saldos dos usuários.
+- A taxa do router é de 0,5% e possui um limite máximo imutável de 1%.
+
+### Recompensas TUCU
+
+- Usuários elegíveis conectados com a World podem resgatar uma recompensa
+  diária de 1 TUCU.
+- Os resgates usam autorizações EIP-712 de curta duração, assinadas pelo backend
+  da TucuWallet e validadas pelo `RewardsDistributorV2` na World Chain.
+- Os identificadores de resgate não podem ser reutilizados. Os limites por
+  missão, o intervalo diário de 24 horas e o máximo de 100 TUCU por usuário a
+  cada período de 30 dias são aplicados on-chain.
+- A recompensa diária não exige prova de humanidade. World ID continua
+  disponível para ações opcionais ou protegidas no Mini App.
+
+### Segurança e verificação
+
+- A carteira é não custodial. A TucuWallet não armazena chaves privadas nem
+  frases-semente e não pode movimentar fundos sem a confirmação do usuário.
+- Os contratos de produção estão verificados no WorldScan.
+- Código público: https://github.com/matiiiastorres/tucuwallet-contracts
+- A suíte automatizada contém 23 testes aprovados, 98,48% de cobertura de linhas
+  e 97,16% de cobertura de instruções.
+
+### Nota para o revisor sobre as permissões do rascunho
+
+Os cinco contratos chamados diretamente e os três tokens Permit2 estão
+declarados em **Developer Portal > Mini App > Permissions** neste rascunho.
+Durante o teste pelo QR, a World Wallet ainda retorna `invalid_contract` para
+os novos entrypoints. Segundo a documentação do MiniKit, isso significa que o
+contrato ainda não está permitido para o app. Solicitamos aplicar ou validar a
+allowlist de Permissions do rascunho antes de testar transferências e resgates
+TUCU.
 
 ## Final pre-submission gate
 
 - Localize the Rewards screen and its transaction messages in English, Spanish
-  and Portuguese.
+  and Portuguese. The Developer Portal currently declares all three language
+  families (`en`, `es`/`es_419`, `pt`).
 - Present the claim as explicit visual states: preparing, confirm in World,
   pending on World Chain, confirmed, rejected/error.
 - Keep the daily amount, 24-hour countdown and current TUCU balance visible.
