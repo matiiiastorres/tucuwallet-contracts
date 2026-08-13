@@ -65,6 +65,17 @@ Active reward signer:
 No private key is committed to this repository. Deployment and signer keys are
 environment secrets and are never exposed to the frontend.
 
+## Automated tests
+
+The Solidity test suite covers the production token, rewards distributor and
+non-custodial transfer router. It requires Node.js 22.19 or newer.
+
+```bash
+npm ci
+npm test
+npm run test:coverage
+```
+
 ## Reproducibility and verification
 
 - Solidity source is under `src/`.
@@ -104,4 +115,3 @@ TucuWallet calls the transfer router and rewards distributor through MiniKit's
 entrypoints, are declared in the TucuWallet Developer Portal draft.
 
 Application: https://www.tucuwallet.com
-

@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.19.0"
+  },
   "scripts": {
+    "test": "hardhat test solidity --chain-type op",
+    "test:coverage": "hardhat --coverage test solidity --chain-type op",
     "compile": "hardhat compile",
     "check": "hardhat run scripts/check.mjs",
     "check:rewards-v2": "hardhat run scripts/check-rewards-v2.mjs",
@@ -26,6 +31,7 @@
     "@openzeppelin/contracts-upgradeable": "5.6.1",
     "@openzeppelin/hardhat-upgrades": "4.0.2",
     "ethers": "6.17.0",
+    "forge-std": "github:foundry-rs/forge-std#v1.9.4",
     "hardhat": "3.10.0"
   }
 }
