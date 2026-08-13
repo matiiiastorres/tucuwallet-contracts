@@ -1,0 +1,31 @@
+{
+  "name": "tucu-token-contracts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "compile": "hardhat compile",
+    "check": "hardhat run scripts/check.mjs",
+    "check:rewards-v2": "hardhat run scripts/check-rewards-v2.mjs",
+    "audit:rewards-v2": "hardhat run scripts/audit-rewards-v2.mjs --network worldchain",
+    "check:transfer-router": "hardhat run scripts/check-transfer-router.mjs",
+    "simulate:transfer-router-mainnet": "hardhat run scripts/simulate-transfer-router-mainnet.mjs --network worldchainFork",
+    "deploy:transfer-router": "hardhat run scripts/deploy-transfer-router.mjs --network worldchain",
+    "configure:transfer-router": "hardhat run scripts/configure-transfer-router.mjs --network worldchain",
+    "deploy:rewards-v2": "hardhat run scripts/deploy-rewards-v2.mjs --network worldchain",
+    "configure:rewards-v2": "hardhat run scripts/configure-rewards-v2.mjs --network worldchain",
+    "estimate:rewards-v2": "node scripts/estimate-rewards-v2.mjs",
+    "worldscan:prepare": "node scripts/prepare-worldscan.mjs",
+    "worldscan:prepare-router": "node scripts/prepare-router-worldscan.mjs",
+    "gas:local": "hardhat run scripts/gas-report.mjs",
+    "estimate:mainnet": "hardhat run scripts/estimate-mainnet.mjs --network worldchain"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "4.0.15",
+    "@openzeppelin/contracts": "5.6.1",
+    "@openzeppelin/contracts-upgradeable": "5.6.1",
+    "@openzeppelin/hardhat-upgrades": "4.0.2",
+    "ethers": "6.17.0",
+    "hardhat": "3.10.0"
+  }
+}

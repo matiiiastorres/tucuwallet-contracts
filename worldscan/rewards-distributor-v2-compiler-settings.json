@@ -1,0 +1,10 @@
+{
+  "compiler": "v0.8.36+commit.8a079791",
+  "license": "MIT",
+  "optimization": true,
+  "runs": 200,
+  "evmVersion": "cancun",
+  "contracts": [
+    "project/src/RewardsDistributorV2.sol"
+  ]
+}

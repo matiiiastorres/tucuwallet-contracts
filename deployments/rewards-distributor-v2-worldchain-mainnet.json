@@ -1,0 +1,19 @@
+{
+  "network": "World Chain Mainnet",
+  "chainId": 480,
+  "contract": "RewardsDistributorV2",
+  "address": "0x3f350C8Bc884189194186523D79a53D93095d846",
+  "tokenProxy": "0x2dCFE82458e2dc32E1035c6F6535B496B04Ab3a3",
+  "admin": "0xa2318a8C5A19bbed1176B6cA2a760A9C895f17c9",
+  "rewardSigner": "0x6e6Ccd023d6C572D322c8670E74ffA9253d39526",
+  "revokedRewardSigner": "0x95177284488686E7F1907EF7DF50dBadfAe43212",
+  "rewardSignerRotationTransaction": "0x96f30c34f522d0559208e4c92e0b973eed2a974c4a0517e0982ba6e473ee3e05",
+  "rewardSignerRotationBlock": 33021241,
+  "deployer": "0xa2318a8C5A19bbed1176B6cA2a760A9C895f17c9",
+  "runtimeCodeHash": "0x73e4b7e421a5df4618264304a511ef2aece22c099fe79913e6ab8539393926f4",
+  "deploymentTransaction": "0x36bd6b0fce2b21b4390cb2ff02315cd5375d8894429a1dc61c4ebf6c0f4645b8",
+  "deploymentBlock": 33013379,
+  "deploymentGasUsed": "1490744",
+  "auditStatus": "REWARDS_DISTRIBUTOR_V2_AUDIT_OK",
+  "configuredMissions": 8
+}

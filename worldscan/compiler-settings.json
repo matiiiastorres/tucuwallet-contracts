@@ -1,0 +1,14 @@
+{
+  "compiler": "v0.8.24+commit.e11b9ed9",
+  "license": "MIT",
+  "optimization": true,
+  "runs": 200,
+  "evmVersion": "shanghai",
+  "contracts": [
+    "project/src/RewardsDistributorV2.sol",
+    "project/src/TucuProxy.sol",
+    "project/src/TucuTestRewards.sol",
+    "project/src/TucuToken.sol",
+    "project/src/TucuTransferRouter.sol"
+  ]
+}

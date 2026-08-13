@@ -1,0 +1,14 @@
+{
+  "network": "World Chain Mainnet",
+  "chainId": 480,
+  "proxy": "0x2dCFE82458e2dc32E1035c6F6535B496B04Ab3a3",
+  "implementation": "0x55Fe4A300FaDB38F774Ccfa596F95a5e39e70B60",
+  "admin": "0xa2318a8C5A19bbed1176B6cA2a760A9C895f17c9",
+  "name": "Tucu",
+  "symbol": "TUCU",
+  "decimals": 18,
+  "initialSupply": "0",
+  "initialMaxSupply": "100000000",
+  "explorer": "https://worldscan.org",
+  "rpc": "https://worldchain-mainnet.g.alchemy.com/public"
+}

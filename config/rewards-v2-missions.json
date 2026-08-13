@@ -1,0 +1,58 @@
+[
+  {
+    "id": "web3_welcome",
+    "amountTucu": 1,
+    "cooldownSeconds": 0,
+    "maxLifetimeClaims": 1,
+    "maxClaimsPer30Days": 1
+  },
+  {
+    "id": "daily_web3",
+    "amountTucu": 1,
+    "cooldownSeconds": 86400,
+    "maxLifetimeClaims": 0,
+    "maxClaimsPer30Days": 30
+  },
+  {
+    "id": "first_store",
+    "amountTucu": 10,
+    "cooldownSeconds": 0,
+    "maxLifetimeClaims": 1,
+    "maxClaimsPer30Days": 1
+  },
+  {
+    "id": "first_product",
+    "amountTucu": 1,
+    "cooldownSeconds": 0,
+    "maxLifetimeClaims": 1,
+    "maxClaimsPer30Days": 1
+  },
+  {
+    "id": "social_profile",
+    "amountTucu": 1,
+    "cooldownSeconds": 0,
+    "maxLifetimeClaims": 1,
+    "maxClaimsPer30Days": 1
+  },
+  {
+    "id": "complete_profile",
+    "amountTucu": 2,
+    "cooldownSeconds": 0,
+    "maxLifetimeClaims": 1,
+    "maxClaimsPer30Days": 1
+  },
+  {
+    "id": "referral_world",
+    "amountTucu": 5,
+    "cooldownSeconds": 0,
+    "maxLifetimeClaims": 0,
+    "maxClaimsPer30Days": 10
+  },
+  {
+    "id": "community_founder",
+    "amountTucu": 50,
+    "cooldownSeconds": 0,
+    "maxLifetimeClaims": 1,
+    "maxClaimsPer30Days": 1
+  }
+]
